@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maquette — Recherche avancée admin</title>
+  <link rel="stylesheet" href="styleMaquette.css" />
+</head>
+<body>
+  <header>
+    <div class="brand">
+      
+      <div>
+        <h1>Recherche avancée</h1>
+        <p class="subtitle">Interface d'administration — Découvertes, artistes, utilisateurs et contributions</p>
+      </div>
+    </div>
+
+    <div class="header-actions">
+      <button>Retour aux découvertes</button>
+      <button>Exporter</button>
+      <button class="primary">Rechercher</button>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside>
+      <section class="filter-panel">
+        
+
+        <details class="accordion" open>
+          <summary>1. Type de contenu</summary>
+          <div class="accordion-content checkbox-grid">
+            <label class="checkbox-row"><input type="checkbox" checked /> Œuvre d’art</label>
+            <label class="checkbox-row"><input type="checkbox" checked /> Lieu patrimonial</label>
+            <label class="checkbox-row"><input type="checkbox" /> Lieu culturel</label>
+            <label class="checkbox-row"><input type="checkbox" /> Artiste</label>
+            <label class="checkbox-row"><input type="checkbox" /> Utilisateur</label>
+            <label class="checkbox-row"><input type="checkbox" /> Suppression</label>
+          </div>
+        </details>
+
+        <details class="accordion" open>
+          <summary>2. Identifiants</summary>
+          <div class="accordion-content">
+            <div class="field"><label>ID général</label><input type="text" placeholder="Recherche dans tous les IDs" /></div>
+            <div class="grid-2">
+              <div class="field"><label>ID œuvre</label><input type="text" /></div>
+              <div class="field"><label>ID RPCQ</label><input type="text" /></div>
+            </div>
+            <div class="grid-2">
+              <div class="field"><label>ID patrimoine</label><input type="text" /></div>
+              <div class="field"><label>ID lieu culturel</label><input type="text" /></div>
+            </div>
+            <div class="grid-2">
+              <div class="field"><label>ID artiste</label><input type="text" /></div>
+              <div class="field"><label>ID utilisateur</label><input type="text" /></div>
+            </div>
+          </div>
+        </details>
+
+        <details class="accordion">
+          <summary>3. Informations générales</summary>
+          <div class="accordion-content">
+            <div class="field"><label>Titre</label><input type="text" placeholder="Ex. Murale, sculpture..." /></div>
+            <div class="field"><label>Description</label><textarea placeholder="Recherche par mots-clés dans la description"></textarea></div>
+            <div class="field"><label>URL</label><input type="url" placeholder="https://..." /></div>
+            <div class="field"><label>Tags</label><input type="text" placeholder="Ex. mural, public, patrimoine" /></div>
+            <div class="grid-2">
+              <div class="field"><label>Producteur</label><input type="text" /></div>
+              <div class="field"><label>Propriétaire</label><input type="text" /></div>
+            </div>
+            <div class="field"><label>Mention</label><input type="text" /></div>
+          </div>
+        </details>
+
+        <details class="accordion">
+          <summary>4. Localisation</summary>
+          <div class="accordion-content">
+            <div class="field"><label>Région</label><select><option>Toutes les régions</option><option>Montréal</option><option>Québec</option><option>Côte-Nord</option></select></div>
+            <div class="grid-2">
+              <div class="field"><label>Municipalité</label><input type="text" /></div>
+              <div class="field"><label>Quartier</label><input type="text" /></div>
+            </div>
+            <div class="field"><label>Adresse</label><input type="text"/></div>
+            <div class="grid-2">
+              <div class="field"><label>Localisation</label><input type="text" /></div>
+              <div class="field"><label>Territoire</label><input type="text" /></div>
+            </div>
+          </div>
+        </details>
+
+        <details class="accordion">
+          <summary>5. Dates</summary>
+          <div class="accordion-content">
+            <div class="field">
+              <label>Date de création</label>
+              <div class="grid-2"><input type="date" /><input type="date" /></div>
+            </div>
+            <div class="field">
+              <label>Date de mise à jour </label>
+              <div class="grid-2"><input type="date" /><input type="date" /></div>
+            </div>
+            <div class="field">
+              <label>Date de capture de la photo</label>
+              <div class="grid-2"><input type="date" /><input type="date" /></div>
+            </div>
+            <div class="field">
+              <label>Date de téléversement de la photo</label>
+              <div class="grid-2"><input type="date" /><input type="date" /></div>
+            </div>
+            <div class="field">
+              <label>Date de création du compte utilisateur</label>
+              <div class="grid-2"><input type="date" /><input type="date" /></div>
+            </div>
+          </div>
+        </details>
+
+        <details class="accordion">
+          <summary>6. Œuvres d’art</summary>
+          <div class="accordion-content">
+            <div class="field"><label>Artiste(s)</label><input type="text" placeholder="Nom d’artiste" /></div>
+            <div class="grid-2">
+              <div class="field"><label>Produit en</label><input type="text" placeholder="Année" /></div>
+              <div class="field"><label>Dimensions</label><input type="text" /></div>
+            </div>
+            <div class="field"><label>Catégorie(s)</label><select multiple><option>Murale</option><option>Sculpture</option><option>Monument</option><option>Installation</option></select></div>
+            <div class="grid-2">
+              <div class="field"><label>Support(s)</label><input type="text" /></div>
+              <div class="field"><label>Technique(s)</label><input type="text" /></div>
+            </div>
+            <div class="field"><label>Matériaux</label><input type="text" placeholder="Bronze, bois, acier..." /></div>
+          </div>
+        </details>
+
+        <details class="accordion">
+          <summary>7. Patrimoine</summary>
+          <div class="accordion-content">
+            <div class="grid-2">
+              <div class="field"><label>Produit en</label><input type="text" /></div>
+              <div class="field"><label>Fin de production</label><input type="text" /></div>
+            </div>
+            <div class="field"><label>Statut</label><select><option>Tous</option><option>Classé</option><option>Cité</option><option>Inventorié</option></select></div>
+            <div class="field"><label>Sous-usages</label><input type="text" /></div>
+            <div class="field"><label>Fonctions</label><input type="text" /></div>
+          </div>
+        </details>
+
+        <details class="accordion">
+          <summary>8. Lieux culturels</summary>
+          <div class="accordion-content">
+            <div class="field"><label>Usage</label><select><option>Tous les usages</option><option>Musée</option><option>Galerie</option><option>Bibliothèque</option><option>Salle de spectacle</option></select></div>
+          </div>
+        </details>
+
+        <details class="accordion" open>
+          <summary>9. Notes, commentaires et photos</summary>
+          <div class="accordion-content">
+            <div class="label">Présence / absence</div>
+            <div class="checkbox-grid">
+              <label class="checkbox-row"><input type="checkbox" /> Avec note</label>
+              <label class="checkbox-row"><input type="checkbox" /> Sans note</label>
+              <label class="checkbox-row"><input type="checkbox" /> Avec commentaires</label>
+              <label class="checkbox-row"><input type="checkbox" /> Sans commentaires</label>
+              <label class="checkbox-row"><input type="checkbox" /> Avec photo</label>
+              <label class="checkbox-row"><input type="checkbox" /> Sans photo</label>
+            </div>
+            <div class="field"><label>Note exacte</label><select><option>Toutes</option><option>1 étoile</option><option>2 étoiles</option><option>3 étoiles</option><option>4 étoiles</option><option>5 étoiles</option></select></div>
+            <div class="field"><label>Plage de note moyenne</label><div class="grid-2"><input type="number" min="0" max="5" step="0.1" placeholder="De" /><input type="number" min="0" max="5" step="0.1" placeholder="À" /></div></div>
+            <div class="field"><label>Nombre de notes</label><div class="grid-2"><input type="number" placeholder="De" /><input type="number" placeholder="À" /></div></div>
+            <div class="field"><label>Nombre de commentaires</label><div class="grid-2"><input type="number" placeholder="De" /><input type="number" placeholder="À" /></div></div>
+            <div class="field"><label>Mots-clés dans les commentaires</label><input type="text" /></div>
+            <div class="field"><label>Longueur du commentaire</label><select><option>Toutes</option><option>Court</option><option>Moyen</option><option>Long</option></select></div>
+            <div class="field"><label>Nombre de photos</label><div class="grid-2"><input type="number" placeholder="De" /><input type="number" placeholder="À" /></div></div>
+          </div>
+        </details>
+
+        <details class="accordion">
+          <summary>10. Utilisateurs</summary>
+          <div class="accordion-content">
+            <div class="field"><label>ID utilisateur</label><input type="text" /></div>
+            <div class="field"><label>Découvertes collectionnées</label><div class="grid-2"><input type="number" placeholder="De" /><input type="number" placeholder="À" /></div></div>
+            <div class="field"><label>Œuvres collectionnées</label><div class="grid-2"><input type="number" placeholder="De" /><input type="number" placeholder="À" /></div></div>
+            <div class="field"><label>Lieux patrimoniaux collectionnés</label><div class="grid-2"><input type="number" placeholder="De" /><input type="number" placeholder="À" /></div></div>
+            <div class="field"><label>Lieux culturels collectionnés</label><div class="grid-2"><input type="number" placeholder="De" /><input type="number" placeholder="À" /></div></div>
+            <div class="field"><label>Commentaires rédigés</label><div class="grid-2"><input type="number" placeholder="De" /><input type="number" placeholder="À" /></div></div>
+            <div class="field"><label>Notes attribuées</label><div class="grid-2"><input type="number" placeholder="De" /><input type="number" placeholder="À" /></div></div>
+            <div class="field"><label>Étoiles attribuées à une découverte</label><select><option>Toutes</option><option>1 étoile</option><option>2 étoiles</option><option>3 étoiles</option><option>4 étoiles</option><option>5 étoiles</option></select></div>
+            <label class="checkbox-row"><input type="checkbox" /> Première contribution</label>
+            <label class="checkbox-row"><input type="checkbox" /> Contributions ultérieures</label>
+          </div>
+        </details>
+
+        <details class="accordion">
+          <summary>11. Artistes</summary>
+          <div class="accordion-content">
+            <div class="field"><label>ID artiste</label><input type="text" /></div>
+            <div class="field"><label>Quantité d’œuvres</label><div class="grid-2"><input type="number" placeholder="De" /><input type="number" placeholder="À" /></div></div>
+            <div class="field"><label>Quantité de photos des œuvres</label><div class="grid-2"><input type="number" placeholder="De" /><input type="number" placeholder="À" /></div></div>
+            <div class="field"><label>Quantité de commentaires des œuvres</label><div class="grid-2"><input type="number" placeholder="De" /><input type="number" placeholder="À" /></div></div>
+            <div class="field"><label>Quantité de notes des œuvres</label><div class="grid-2"><input type="number" placeholder="De" /><input type="number" placeholder="À" /></div></div>
+            <div class="field"><label>Note moyenne des œuvres</label><div class="grid-2"><input type="number" min="0" max="5" step="0.1" placeholder="De" /><input type="number" min="0" max="5" step="0.1" placeholder="À" /></div></div>
+            <div class="field"><label>Type</label><select><option>Tous</option><option>Artiste individuel</option><option>Collectif</option></select><span class="hint"></span></div>
+          </div>
+        </details>
+
+        <details class="accordion">
+          <summary>12. Recherche géographique</summary>
+          <div class="accordion-content">
+            <div class="field"><label>Adresse ou coordonnées</label><input type="text" /></div>
+            <div class="grid-2">
+              <div class="field"><label>Rayon</label><input type="number" /></div>
+              <div class="field"><label>Unité</label><select><option>km</option><option>mètres</option></select></div>
+            </div>
+          </div>
+        </details>
+
+        <div class="filter-actions">
+          <button class="danger">Réinitialiser</button>
+          <button class="primary">Appliquer</button>
+        </div>
+      </section>
+    </aside>
+
+    <main class="content-stack">
+      <section class="toolbar">
+        <div class="view-tabs">
+          <button class="active">Liste</button>
+          <button>Grille</button>
+          <button>Vue photo</button>
+          <button>Carte</button>
+        </div>
+        <div class="stats">
+          <div class="stat"><strong>0</strong> résultats</div>
+          <div class="stat"><strong>0</strong> avec photo</div>
+          <div class="stat"><strong>0</strong> avec note</div>
+          <div class="stat"><strong>0</strong> avec commentaire</div>
+        </div>
+      </section>
+
+      <!-- TODO: Résultats de la recherche 
+      <section class="results-panel">
+        <table>
+          <thead>
+            <tr>
+              <th>Photo</th>
+              <th>Titre</th>
+              <th>Type</th>
+              <th>Artiste / Responsable</th>
+              <th>Localisation</th>
+              <th>Note</th>
+              <th>Commentaires</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+            </tr>
+            <tr>
+            </tr>
+            <tr>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      -->
+
+    <!-- TODO: Carte interactive -->
+    </main>
+  </div>
+
+
+</body>
+</html>
